@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root{
+--hue-colour: 360;
+  --background: hsl(var(--hue-colour), 69%, 61%);
+  --nav: hsl(var(--hue-colour), 69%, 41%);
+  --button: hsl(var(--hue-colour), 69%, 31%);
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.weather{
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.weather > div{
+    margin: 0.625rem;
+}
+
+.weather1 span{
+    font-size: 4rem;
+}
+
+.weather p{
+    font-size: 2rem;
+}
+
+.weather2 span{
+    font-size: 1rem;
+}
+
+.weather3 span{
+    margin: 0.3rem;
+}
+.weather3 img {
+    width: 2rem;
+}
+
+nav{
+    height: 50px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.18);
+    position: absolute;
+    top: 10%;
+    width: 85%;
+    background-color: var(--nav);
+    display: flex;
+    justify-content: center;
+    border-radius: 100px;
+    padding: 1rem 0;
+}
+
+nav form{
+    z-index: 10;
+    width: 85%;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+
+.searchField{
+    font-size: 1.1rem;
+    outline: none;
+    color: white;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 98%;
+    transition: 0.4s ease-in-out;
+}
+::placeholder{
+    color: white;
+    opacity: 0.8;
+}
+.searchField:focus{
+    padding: 1rem 0;
+    border-bottom: 2px solid white;
+}
+
+nav form button{
+    background-color: var(--button);
+    border-radius: 0 25px 25px 0;
+    padding: 0.3rem;
+    font-size: 1.1rem;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+button:hover{
+    background-color: transparent;
+}
