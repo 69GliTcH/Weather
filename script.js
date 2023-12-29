@@ -1,13 +1,3 @@
-let huecolor = 0;
-setInterval(() => {
-    if (huecolor < 360) {
-        ++huecolor;
-    } else {
-        huecolor = 0;
-    }
-    document.documentElement.style.setProperty("--hue-colour", huecolor);
-}, 100);
-
 const tempField = document.querySelector(".weather1 span");
 const cityField = document.querySelector(".weather2 p");
 const dateField = document.querySelector(".weather2 span");
